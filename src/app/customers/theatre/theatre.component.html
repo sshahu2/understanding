@@ -1,0 +1,577 @@
+<!-- <div style="background-color:rgb(0, 255, 136);border:1em;">
+<div style="margin-bottom: 50px"></div>
+<div class="container">
+<div *ngIf="moviefetched">
+  <img [src]="movieimage"alt="Los Angeles" style="width:100%;">
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4">
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#TODAY">20 TODAY</a></li>
+        <li><a data-toggle="tab" href="#TOM">21 TOM</a></li>
+        <li><a data-toggle="tab" href="#TUE">22 TUE</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="TODAY" class="tab-pane fade in active">
+
+<div class="container">
+
+            <div class="row">
+  <div class="col-sm-12" *ngFor='let theatre of moviefetched.theatre;let i=index'>
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+            <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-body" >{{theatre.name}}</div>
+          </div>
+        </div>
+        <div class="col-sm-1" *ngFor='let timings of theatre.timing;let i=index'>
+          <div class="panel panel-default">
+            <div class="panel-body"  >{{timings}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+                  </div>
+</div>
+
+          
+        </div>
+        <div id="TOM" class="tab-pane fade">
+      <div class="container">
+
+            <div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+            <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-body" s>Cinepolis: Royal Meenakshi Mall</div>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="panel panel-default">
+            <div class="panel-body">7:15</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+                  </div>
+</div>
+        </div>
+        <div id="TUE" class="tab-pane fade">
+          <div class="container">
+
+            <div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+
+            <div class="col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-body" s>Cinepolis: Royal Meenakshi Mall</div>
+          </div>
+        </div>
+        <div class="col-sm-1">
+          <div class="panel panel-default">
+            <div class="panel-body">7:15</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+                  </div>
+</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+      <div class="container">
+        <ul class="nav nav-tabs">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">FORMAT <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">ENGLISH-2D</a></li>
+              <li><a href="#">HINDI-2D</a></li>
+              <li><a href="#">ENGLISH-IMAX-3D</a></li>
+              <li><a href="#">ENGLISH-4DX</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">PRICE RANGE <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <form>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">RS.100-200</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">RS.200-300</label>
+                </div>
+                <div class="checkbox ">
+                  <label><input type="checkbox" value="">RS.300-400</label>
+                </div>
+              </form>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">SHOW TIMINGS <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <form>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">MORNING <span class="glyphicon glyphicon-sun"></span></label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">AFTERNOON<span class="glyphicons glyphicons-brightness-increase"></span></label>
+                </div>
+                <div class="checkbox ">
+                  <label><input type="checkbox" value="">EVENING<span class="glyphicons glyphicons-brightness-reduce"></span></label>
+                </div>
+                <div class="checkbox ">
+                  <label><input type="checkbox" value="">NIGHT<span class="glyphicons glyphicons-moon"></span></label>
+                </div>
+              </form>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<p-dialog header="Godfather I" [(visible)]="display" [modal]="true" [responsive]="true" [width]="100" [minWidth]="100" [minY]="70">
+    <span>The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding. 
+        His beloved son Michael has just come home from the war, but does not intend to become part of his father's business. 
+        Through Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family, 
+        kind and benevolent to those who give respect,
+        but given to ruthless violence whenever anything stands against the good of the family.</span>
+        <p-footer>
+            <button type="button" pButton icon="fa-check" (click)="display=false" label="Yes"></button>
+            <button type="button" pButton icon="fa-close" (click)="display=false" label="No"></button>
+        </p-footer>
+</p-dialog>
+</div> -->
+<nav>
+  <ul>
+    <li>
+      <a href="#">Link</a>
+    </li>
+    <li>
+      <a href="#">Link</a>
+    </li>
+    <li>
+      <a href="#">Link</a>
+    </li>
+    <li>
+      <a href="#">Disabled</a>
+    </li>
+  </ul>
+  <ul class="social">
+    <li  style="height: 100px;
+    width: 100px;">
+      <a class="fb" href="#">facebook</a>
+    </li>
+    <li style="height: 100px;
+    width: 100px;">
+      <a class="In" href="#">Instagram</a>
+    </li>
+  </ul>
+
+
+</nav>
+<div class="wrapper">
+  <div class="flex-container">
+    <div class="box one"></div>
+    <div class="box two"></div>
+    <div class="box three"></div>
+
+  </div>
+</div>
+<h1>for template driven forms</h1>
+<form >
+  <div class="form-group">
+    <label for="intro">Intro:</label>
+    <input required minlength="3" maxlength="8" pattern="sanjay"ngModel name="introName" #introName="ngModel" (change)=log(introName) type="text" class="form-control" id="intro">
+    <div class="alert alert-danger" *ngIf="introName.touched&&!introName.valid">
+      <div *ngIf="introName.errors.required">required</div>
+      <div *ngIf="introName.errors.minlength">{{introName.errors.minlength.requiredLength}}</div>
+      <div *ngIf="introName.errors.pattern">give correct</div>
+
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="pwdx">Password:</label>
+    <input type="password" class="form-control" id="pwdx">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Remember me</label>
+  </div>
+  <div class="form-group">
+   <select class="custom select">
+     <option selected>this one</option>
+     <option *ngFor="let topic of topics">{{topic}}</option>
+
+   </select>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+
+
+
+
+
+
+<h2>new tdf</h2>
+<form #secondform="ngForm">
+<h1>obtained from form control objects of each field n keys are name in each fields</h1>
+
+  {{secondform.value|json}}
+  <!-- template refence variable can be used to pass value of this form to server here secondform.value -->
+  <hr/>
+  <h1>obtained from usermodel object</h1>
+  {{userModel|json}}
+<div class="form-group">
+    <label for="pwd">newintro:</label>
+    <input type="text" class="form-control" id="pwd" [(ngModel)]=userModel.introsecond name="introsecond">
+  </div>
+  
+
+<div class="form-group">
+    <select class="custom select" [(ngModel)]=userModel.selecter name="selecter">
+      <!-- anything we want to display as default is in ngmodel of selector but value is from option value -->
+      <!-- //by default userModel.selector is passed to form control object -->
+      <!-- //when ngModel is used selected default this one disappears. -->
+      <!-- <option selected>this one</option> -->
+      <!-- <option  value="">default</option> -->
+      <option value ={{topic}} *ngFor="let topic of topics">{{topic}}</option>
+      <!-- on selecting value from ngfor selected one is passed -->
+ 
+    </select>
+   </div>
+<div class="form-check">
+    <input class="form-check-input" type="radio" [(ngModel)]=userModel.exampleRadios name="exampleRadios" id="exampleRadios1" value="option1" checked>
+    <!-- //when ngModel is used checked default disappears. -->
+    <!-- ngmodel with two way data-binding is used and supply which value you want to select from radios -->
+    <label class="form-check-label" for="exampleRadios1">
+      Default radio
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" [(ngModel)]=userModel.exampleRadios name="exampleRadios" id="exampleRadios2" value="option2">
+    <label class="form-check-label" for="exampleRadios2">
+      Second default radio
+    </label>
+  </div>
+  <hr>
+  <div class="checkbox">
+      <label>
+        <input type="checkbox" [(ngModel)]=userModel.yaad name="yaad"> Remember me</label>
+    </div>
+
+
+     <div ngModelGroup="address">
+       <!-- //used for making subgroup within form that will be assigned to object addresss --> 
+    <div class="form-group">
+        <label for="pwd1">newintro1:</label>
+        <input type="text" class="form-control" id="pwd1" [(ngModel)]=userModel.introsecond1 name="introsecond1">
+      </div>
+      <div class="form-group">
+          <label for="pwd2">newintro2:</label>
+          <input type="text" class="form-control" id="pwd2" [(ngModel)]=userModel.introsecond2 name="introsecond2">
+        </div>
+        <div class="form-group">
+            <label for="pwd3">newintro3:</label>
+            <input type="text" class="form-control" id="pwd3" [(ngModel)]=userModel.introsecond3 name="introsecond3">
+          </div>
+          </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+
+  <h1>Reactive forms</h1>
+<form nonvalidate [formGroup]="rForm" (ngSubmit)="addPost(rForm)">
+  <!-- rform in addpost is act rform binde dto formgroup also for each field formcontrolname should be present and iys name must be similar to keys created using Form control-->
+    <div class="form-group">
+        <label for="name">name</label>
+        <input type="text" class="form-control"  formControlName="name">
+      </div>
+      <div *ngIf="rForm.get('name').touched && rForm.get('name').invalid" class="alert alert-danger">
+          <div *ngIf="rForm.get('name').hasError('required')">
+             name is required
+          </div>
+          <div *ngIf="rForm.get('name').hasError('minlength')">
+            at least 10
+           </div>
+           <div *ngIf="rForm.get('name').hasError('maxlength')">
+            at max 12
+           </div>
+
+      </div>
+      <div class="form-group">
+          <label for="contact">contact</label>
+          <input type="text" class="form-control"  formControlName="contact">
+
+        </div>
+        <div *ngIf="rForm.get('contact').touched && rForm.get('contact').invalid" class="alert alert-danger">
+          <!-- thru rform reference to form we are getting contact  formcontrol n checking if touched and validity and down thre blocks based on validations defined in .ts file -->
+            <div *ngIf="rForm.get('contact').hasError('required')">
+                contact is required
+            </div>
+            <div *ngIf="rForm.get('contact').hasError('minlength')">
+              at least 10
+             </div>
+             <div *ngIf="rForm.get('contact').hasError('maxlength')">
+              at max 12
+             </div>
+  
+        </div>
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="text" class="form-control"  formControlName="email">
+          </div>
+          <div *ngIf="rForm.get('email').touched && rForm.get('email').invalid" class="alert alert-danger">
+              <div *ngIf="rForm.get('email').hasError('required')">
+                  email is required
+              </div>
+              <div *ngIf="rForm.get('email').hasError('minlength')">
+                at least 10
+               </div>
+               <div *ngIf="rForm.get('email').hasError('maxlength')">
+                at max 12
+               </div>
+    
+          </div>
+          <button type="submit" class="btn btn-default"[disabled]="rForm.invalid">Submit</button>
+
+</form>
+<div *ngFor="let x of userList">
+  {{x.name}}
+</div>
+<h1 >reactive basics using material</h1>
+<form [formGroup]="bForm">
+  
+      Value: {{ bForm.value | json }}
+  
+      <hr>
+       <div>
+      <mat-form-field>
+          <input matInput placeholder="email" formControlName="email">
+      </mat-form-field>
+     </div>
+     <div>
+      <mat-form-field>
+          <textarea matInput placeholder="your message..." formControlName="message"></textarea>
+      </mat-form-field>
+      </div>
+      <div>
+      <mat-form-field>
+          <mat-select formControlName="career" placeholder="career">
+              <mat-option value="Magician">Magician</mat-option>
+              <mat-option value="Clown">Clown</mat-option>
+              <mat-option value="Juggler">Juggler</mat-option>
+          </mat-select>
+      </mat-form-field>
+  </div>
+  </form>
+  <h1 >reactive nested using material</h1>
+  <form [formGroup]="nForm">
+    
+        Value: {{ nForm.value | json }}
+    
+        <hr>
+    
+        <mat-form-field class="full">
+            <input matInput placeholder="email" formControlName="email">
+        </mat-form-field>
+    
+        <h4>Cell Phone</h4>
+    
+        <div formGroupName="cellPhone">
+          <!-- in case of nested like cellphone has its own schema it is defined using FormGRoupNAMenot formcontrolname inside div -->
+    
+            <mat-form-field class="xs">
+                <input matInput placeholder="area" formControlName="area">
+            </mat-form-field>
+    
+            <mat-form-field class="xs">
+                <input matInput placeholder="prefix" formControlName="prefix">
+            </mat-form-field>
+    
+            <mat-form-field class="sm">
+                <input matInput placeholder="line" formControlName="line">
+            </mat-form-field>
+    
+        </div>
+    
+        <h4>Home Phone</h4>
+    
+        <div formGroupName="homePhone">
+    
+            <mat-form-field class="xs">
+                <input matInput placeholder="area" formControlName="area">
+            </mat-form-field>
+    
+            <mat-form-field class="xs">
+                <input matInput placeholder="prefix" formControlName="prefix">
+            </mat-form-field>
+    
+            <mat-form-field class="sm">
+                <input matInput placeholder="line" formControlName="line">
+            </mat-form-field>
+    
+        </div>
+    
+    
+    </form>
+    <h1 >reactive formarray using material</h1>
+    <form [formGroup]="faForm">
+        
+            Value: {{ faForm.value | json }}
+        
+            <hr>
+        
+            <mat-form-field class="full">
+                <input matInput placeholder="email" formControlName="email">
+            </mat-form-field>
+        
+            <div formArrayName="phones">
+              <!-- here name of fiels in schema is given to formarray name in which fb.array is used -->
+        
+                <div *ngFor="let phone of phoneForms.controls; let i=index" [formGroupName]="i">
+                  <!-- each element in phones arrar is accesses using getters definition phoneforms n assigned to formgroupname -->
+        
+        
+                    <mat-form-field class="xs">
+                        <input matInput placeholder="area" formControlName="area">
+                    </mat-form-field>
+        
+                    <mat-form-field class="xs">
+                        <input matInput placeholder="prefix" formControlName="prefix">
+                    </mat-form-field>
+        
+                    <mat-form-field class="sm">
+                        <input matInput placeholder="line" formControlName="line">
+                    </mat-form-field>
+        
+                    <button mat-raised-button color="warn" (click)="deletePhone()">Delete</button>
+        
+                </div>
+        
+            </div>
+            <div formArrayName="city">
+                <!-- here name of fiels in schema is given to formarray name in which fb.array is used -->
+          
+                  <div *ngFor="let city of cityForms.controls; let i=index" [formGroupName]="i">
+                    <!-- each element in phones arrar is accesses using getters definition phoneforms n assigned to formgroupname -->
+          
+          
+                      <mat-form-field class="xs">
+                          <input matInput placeholder="area" formControlName="area">
+                      </mat-form-field>
+          
+                      <mat-form-field class="xs">
+                          <input matInput placeholder="code" formControlName="code">
+                      </mat-form-field>
+          
+                      <mat-form-field class="sm">
+                          <input matInput placeholder="spot" formControlName="spot">
+                      </mat-form-field>
+          
+                      <button mat-raised-button color="warn" (click)="deleteCity()">Delete</button>
+          
+                  </div>
+          
+              </div>
+        
+            <button mat-raised-button color="primary" (click)="addPhone()">Add Phone Number</button>
+            <button mat-raised-button color="primary" (click)="addCity()">Add City</button>
+        
+        
+        
+        </form>
+
+        <form [formGroup]="myForm">
+          
+              Value: {{ myForm.value | json }}
+              <ul>
+                  <li>Valid:
+                      <mat-chip selected="true" [color]="myForm.valid ? 'accent' : 'warn'">{{ myForm.valid }}</mat-chip>
+                  </li>
+                  <li>Invalid:
+                      <mat-chip selected="true" [color]="myForm.invalid ? 'accent' : 'warn'">{{ myForm.invalid }}</mat-chip>
+                  </li>
+                  <li>Dirty:
+                      <mat-chip selected="true" [color]="myForm.dirty ? 'accent' : 'warn'">{{ myForm.dirty }}</mat-chip>
+                  </li>
+                  <li>Pristine:
+                      <mat-chip selected="true" [color]="myForm.pristine ? 'accent' : 'warn'">{{ myForm.pristine }}</mat-chip>
+                  </li>
+                  <li>Touched:
+                      <mat-chip selected="true" [color]="myForm.touched ? 'accent' : 'warn'">{{ myForm.touched }}</mat-chip>
+                  </li>
+                  <li>Untouched:
+                      <mat-chip selected="true" [color]="myForm.untouched ? 'accent' : 'warn'">{{ myForm.untouched }}</mat-chip>
+                  </li>
+                  <li>Pending:
+                      <mat-chip selected="true" [color]="myForm.pending ? 'accent' : 'warn'">{{ myForm.pending }}</mat-chip>
+                  </li>
+              </ul>
+          
+              <hr>
+          
+              <mat-form-field>
+                  <input matInput placeholder="email" formControlName="email" autocomplete="off">
+          
+                  <mat-error *ngIf="email.invalid && email.touched" class="has-text-danger">
+                      Your email does not look right
+                  </mat-error>
+              </mat-form-field>
+          
+          
+          
+              <mat-form-field>
+                  <input matInput type="password" placeholder="password" formControlName="password" autocomplete="new-password">
+          
+                  <mat-hint align="end">Must have one letter, and one number</mat-hint>
+                  <mat-error *ngIf="password.invalid && password.touched" class="has-text-danger">
+                      That password sucks...
+                  </mat-error>
+          
+              </mat-form-field>
+          
+          
+          
+              <mat-form-field>
+                  <input matInput placeholder="age" [value]="0" formControlName="age">
+          
+                  <mat-error *ngIf="age.errors?.min && age.touched">
+                      {{ age.errors.min.actual }} is young to use this app kiddo!
+                  </mat-error>
+          
+                  <mat-error *ngIf="age.errors?.max && age.touched">
+                      {{ age.errors.max.actual }} is too you old to use this app gramps!
+                  </mat-error>
+          
+              </mat-form-field>
+          
+          
+          
+              <mat-checkbox formControlName="agree" color="primary">Are you sure?</mat-checkbox>
+          
+              <hr>
+          
+              <button mat-raised-button [disabled]="myForm.invalid || loading" color="primary">Let's Do it!</button>
+          
+          
+          
+          
+          </form>

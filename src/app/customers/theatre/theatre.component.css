@@ -1,0 +1,103 @@
+.wrapper{
+    width:100%;
+    max-width:960px;
+    margin:auto;
+    margin-top:2%;
+}
+.flex-container{
+
+ display: flex; 
+ background-color:lightcoral;
+ flex-wrap:wrap;/*when size of boxes reduces more than min-width they will move down and using flex grow they try to cover whole width of wrapper nremove shrink to work*/
+flex-flow:column;/*can be row,row-inverse,colum,column-inverse inverse reverses order of child as well as start to end n viceversa*/
+align-items:flex-end; 
+justify-content:flex-start;
+height:1000px;
+}
+.box{
+    height:100px;
+    width:100px;
+    /* width:320px; */
+   /* flex-basis: 200px;similar to min-width but if browser is reduced then after wrap up elemnt  does not get further reduced... */
+     /* min-width:200px; element will not reduce further than this.. and if browser is reduced scrollbar appears */
+    /* float:left; *//*if used all childs will take whle space of box*/
+      /* flex-grow: 1;for all */
+      flex:0 0 200px;/*grow,shrink,basis n when flex-flow is column basis is min-height of elements*/
+    
+    /*either it is grow or shrink takes respect eith relative elements in flex*/
+    /*also grow takes available empty space in its parent element like these boxes will take of wrapper*/
+}
+
+.one{
+    background-color:red;
+    /* flex-grow: 1;  */
+    /* flex-shrink:1; */
+}
+.two{
+    background-color:black;
+    /* flex-grow: 8;  */
+    /* flex-shrink:8; */
+}
+.three{
+    background-color:blue;
+    /* flex-grow: 1;  */
+    /* flex-shrink:1; */
+}
+/*for navbar*/
+nav{
+    background-color:lightblue;
+}
+nav ul{
+    list-style-type: none;
+}
+
+nav a{
+    text-decoration:none;
+    color:brown;
+    margin:20px;
+    display:block;/*doubt*/
+   
+
+}
+nav a:hover{
+    color: white;
+}
+a.fb{
+    height: 100px;
+    width: 100px;
+    background-image: url('./img/fb.png');
+    /*doubt*/
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+a.in{
+    background-image: url('./img/Instagram_icon.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.social a{
+    text-indent:-10000px;
+
+}
+.social{
+    max-width:80px;
+}
+
+@media screen and (min-width:768px){/*media-query effects only on big screen as 768p xused overwrintin those property mentioned above*/
+    nav ul{
+        list-style-type: none;/*in container we mention whether flex or what*/
+        display: flex;
+        justify-content:space-around;/*how to keep child elements remove flex:1 to see effect*/
+       
+    }
+    nav li {   /* in child we mention  grow ,shrink n all thru flex*/
+        flex:1 ;
+    }
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+
+    
+}

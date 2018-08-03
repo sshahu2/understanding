@@ -1,0 +1,16 @@
+<button type="button" pButton icon="fa fa-chevron-up" (click)="openPrev()"></button>
+<button type="button" pButton icon="fa fa-chevron-down" (click)="openNext()"></button>
+
+<p-tabView [activeIndex]="index" (onChange)="onTabChange($event)">
+    <p-tabPanel [header]="item.levelName" *ngFor="let item of result; let i = index" [selected]="i == 0" [closable]="true">
+        <p-tabView (onChange)="onTabChange2($event)"  orientation="left">
+            <p-tabPanel [header]="x.levelName" *ngFor="let x of item.territoryLevel; let i = index" [selected]="i == 0" [closable]="true">
+                <p-tabView (onChange)="onTabChange2($event)" >
+                    <p-tabPanel [header]="y.levelName" *ngFor="let y of x.subTerritoryLevel; let i = index" [selected]="i == 0" [closable]="true">
+                        {{item.content}}
+                    </p-tabPanel>
+                </p-tabView>
+            </p-tabPanel>
+        </p-tabView>
+    </p-tabPanel>
+</p-tabView>

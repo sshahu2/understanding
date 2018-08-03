@@ -1,0 +1,34 @@
+ <div class="mat-elevation-z20 data-table" ><!--mat-elev for rising -->
+    <mat-form-field>
+        <input matInput #header (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+  <table mat-table #table [dataSource]="dataSource" matSort aria-label="Elements" style="width:100%" >
+    <!-- Id Column -->
+    <ng-container matColumnDef="id" style="margin-right:10%">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header style="margin-right:10%">Id</th>
+      <td mat-cell *matCellDef="let row"style="margin-right:10%">{{row.id}}</td>
+    </ng-container>
+     <!-- Amount Column -->
+   <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef >Amount</th>
+    <td mat-cell *matCellDef="let row">{{row.amount}}</td>
+  </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name" style="margin-right:10%">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header style="margin-right:10%">Name</th>
+      <td mat-cell *matCellDef="let row"style="margin-right:10%">{{row.name}}</td>
+    </ng-container>
+  
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator #paginator
+    [length]="dataSource.data.length"
+    [pageIndex]="0"
+    [pageSize]="5"
+    [pageSizeOptions]="[10, 15, 20, 5]">
+  </mat-paginator>
+</div>
